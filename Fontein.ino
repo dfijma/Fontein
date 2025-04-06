@@ -91,21 +91,21 @@ void loop() {
   if (dark) {
     if (light > LIGHT_THRESHOLD + (hysteresis / 2)) {
       dark = false;
-      //Serial.print("went light ");
+      // DEBUG
+      // Serial.print("went light ");
     }
   } else {
     if (light < LIGHT_THRESHOLD - (hysteresis / 2)) {
       dark = true;
+      // DEBUG
       // Serial.print("went dark ");
     }
   }
 
   // DEBUG
-  Serial.print(hysteresis);
-  Serial.print(" ");
-  Serial.println(light);
-
-
+  //Serial.print(hysteresis);
+  //Serial.print(" ");
+  //Serial.println(light);
 
   // get input and current time
   int button1 = digitalRead(BUTTON_1_PIN);
